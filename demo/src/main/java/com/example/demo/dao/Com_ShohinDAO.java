@@ -105,8 +105,8 @@ public class Com_ShohinDAO {
 				Shohin.setShohin_id(rs.getInt("shohin_ID"));
 				Shohin.setShohin_name(rs.getString("shohin_Name"));
 				Shohin.setTanka(rs.getDouble("tanka"));
-				Shohin.setCreatedate(rs.getDate("createDate"));
-				Shohin.setUpdatedate(rs.getDate("updatedate"));
+				Shohin.setCreatedate(rs.getTimestamp("createDate"));
+				Shohin.setUpdatedate(rs.getTimestamp("updatedate"));
 				Shohin.setImg(rs.getString("img"));
 				Shohin.setPart(rs.getInt("part"));
 				Shohin.setDelete_flg(rs.getBoolean("delete_flg"));
@@ -136,8 +136,8 @@ public class Com_ShohinDAO {
 				Shohin.setShohin_id(rs.getInt("shohin_ID"));
 				Shohin.setShohin_name(rs.getString("shohin_Name"));
 				Shohin.setTanka(rs.getDouble("tanka"));
-				Shohin.setCreatedate(rs.getDate("createDate"));
-				Shohin.setUpdatedate(rs.getDate("updatedate"));
+				Shohin.setCreatedate(rs.getTimestamp("createDate"));
+				Shohin.setUpdatedate(rs.getTimestamp("updatedate"));
 				Shohin.setImg(rs.getString("img"));
 				Shohin.setPart(rs.getInt("part"));
 				Shohin.setDelete_flg(rs.getBoolean("delete_flg"));
@@ -172,8 +172,8 @@ public class Com_ShohinDAO {
 				Shohin.setShohin_id(rs.getInt("shohin_id"));
 				Shohin.setShohin_name(rs.getString("shohin_name"));
 				Shohin.setTanka(rs.getDouble("tanka"));
-				Shohin.setCreatedate(rs.getDate("createDate"));
-				Shohin.setUpdatedate(rs.getDate("updatedate"));
+				Shohin.setCreatedate(rs.getTimestamp("createDate"));
+				Shohin.setUpdatedate(rs.getTimestamp("updatedate"));
 				Shohin.setImg(rs.getString("img"));
 				Shohin.setPart(rs.getInt("part"));
 				Shohin.setDelete_flg(rs.getBoolean("delete_flg"));

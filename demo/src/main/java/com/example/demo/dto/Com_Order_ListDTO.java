@@ -1,5 +1,6 @@
 package com.example.demo.dto;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import lombok.RequiredArgsConstructor;
@@ -9,12 +10,12 @@ public class Com_Order_ListDTO {
 	
     private int orderId;
     private String userId;
-    private Date createdate;
+    private Timestamp createdate;
     
     public Date getCreatedate() {
 		return createdate;
 	}
-	public void setCreatedate(Date createdate) {
+	public void setCreatedate(Timestamp createdate) {
 		this.createdate = createdate;
 	}
 	public String getUserId() {

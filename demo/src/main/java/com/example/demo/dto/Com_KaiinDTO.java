@@ -1,6 +1,6 @@
 package com.example.demo.dto;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 import lombok.RequiredArgsConstructor;
 
@@ -10,7 +10,7 @@ public class Com_KaiinDTO {
 	private String userID;
 	private String userPW;
 	private String userAddress;
-	private Date createDate;
+	private Timestamp createDate;
 	
 	public String getUserID() {
 		return userID;
@@ -30,10 +30,10 @@ public class Com_KaiinDTO {
 	public void setUserAddress(String userAddress) {
 		this.userAddress = userAddress;
 	}
-	public Date getCreateDate() {
+	public Timestamp getCreateDate() {
 		return createDate;
 	}
-	public void setCreateDate(Date createDate) {
+	public void setCreateDate(Timestamp createDate) {
 		this.createDate = createDate;
 	}
 	
@@ -41,7 +41,7 @@ public class Com_KaiinDTO {
 		
 	}
 	
-	public Com_KaiinDTO(String userID, String userPW, String userAddress,Date createDate) {
+	public Com_KaiinDTO(String userID, String userPW, String userAddress,Timestamp createDate) {
 		this.userID = userID;
 		this.userPW = userPW;
 		this.userAddress = userAddress;

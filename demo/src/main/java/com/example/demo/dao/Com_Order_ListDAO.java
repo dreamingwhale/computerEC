@@ -126,7 +126,7 @@ public class Com_Order_ListDAO {
 			while (rs.next()) {
 				listDTO.setOrderId(rs.getInt("orderID"));
 				listDTO.setUserId(rs.getString("userID"));
-				listDTO.setCreatedate(rs.getDate("creatdedate"));
+				listDTO.setCreatedate(rs.getTimestamp("creatdedate"));
 			}
 
 			return listDTO;

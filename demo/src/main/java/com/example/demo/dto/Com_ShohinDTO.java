@@ -1,5 +1,6 @@
 package com.example.demo.dto;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import lombok.RequiredArgsConstructor;
@@ -11,8 +12,8 @@ public class Com_ShohinDTO {
 	private int shohin_id;
 	private String shohin_name;
     private double tanka;
-    private Date createdate;
-    private Date updatedate;
+    private Timestamp createdate;
+    private Timestamp updatedate;
     private int part;
     private String img;
     private boolean delete_flg;
@@ -40,13 +41,13 @@ public class Com_ShohinDTO {
 	public Date getCreatedate() {
 		return createdate;
 	}
-	public void setCreatedate(Date createdate) {
+	public void setCreatedate(Timestamp createdate) {
 		this.createdate = createdate;
 	}
 	public Date getUpdatedate() {
 		return updatedate;
 	}
-	public void setUpdatedate(Date updatedate) {
+	public void setUpdatedate(Timestamp updatedate) {
 		this.updatedate = updatedate;
 	}
 	public int getPart() {

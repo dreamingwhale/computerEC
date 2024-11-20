@@ -129,7 +129,7 @@ public class Com_KaiinDAO {
 				kaiinDTO.setUserID(rs.getString("userID"));
 				kaiinDTO.setUserPW(rs.getString("userPW"));
 				kaiinDTO.setUserAddress(rs.getString("userAddress"));
-				kaiinDTO.setCreateDate(rs.getDate("createdate"));
+				kaiinDTO.setCreateDate(rs.getTimestamp("createdate"));
 			}
 
 			return kaiinDTO;
