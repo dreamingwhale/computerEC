@@ -220,7 +220,7 @@ public class Com_ShohinDAO {
 	 * 
 	 * @param request リクエスト情報の取得
 	 */
-	public static void UpadteShohin(Com_ShohinDTO shohin) {
+	public static void UpdateShohin(Com_ShohinDTO shohin) {
 		try {
 			connect();
 			pstmtUpdate.setString(1, shohin.getShohin_name());

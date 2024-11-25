@@ -131,9 +131,9 @@ public class MainController {
     @PostMapping("/UpdateShohin")
     public String UpdateShohin(HttpServletRequest request,@ModelAttribute Com_ShohinDTO shohinDTO) {
     	System.out.println("修正ID:"+shohinDTO.getShohin_id());
-    	shohinDAO.UpadteShohin(shohinDTO);
+    	shohinDAO.UpdateShohin(shohinDTO);
     	sessionStorage.saveSessionData(request, "Shohins",shohinDAO.getAllShohin());
-    	return "redirect:/main";
+    	return "redirect:/Master";
     }
     
     @GetMapping("/Order")
@@ -162,4 +162,6 @@ public class MainController {
     	kaiinDAO.InsertKaiin(kaiinDTO);
     	return "Login";
     }
+    
+    
 }

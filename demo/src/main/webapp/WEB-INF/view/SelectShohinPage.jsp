@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html lang="ja" xml:lang="ja">
 <head>
+	
     <script>
         function displayValue() {
             var selectedValue = document.getElementById("numberSelect").value;
@@ -15,8 +16,8 @@
 	<link rel="stylesheet" href="<c:url value='/css/SelectShohinPage.css' />">
 </head>
 <body>
-<form action="/UpdateShohin" method="POST">
-	<h1>商品マスタ詳細</h1>
+	<form action="<c:url value='/UpdateShohin' />" method="POST" id="UpdateShohin">
+    <h1>商品マスタ詳細</h1>
     <div>
         <label for="Shohin_id">商品ID:</label>
         <input type="text" id="shohin_id" name="shohin_id" required readonly value="${shousaiShohin.shohin_id}">
@@ -29,43 +30,43 @@
         <label for="tanka">単価:</label>
         <input type="text" id="tanka" name="tanka" value="${shousaiShohin.tanka}" required>
     </div>
-	<div>
-		<label for="part">パーツ</label>
-	    <select id="numberSelect" onchange="displayValue()">
-	        <option value="1" ${shousaiShohin.part == 1 ? 'selected' : ''}>CPU</option>
-	        <option value="2" ${shousaiShohin.part == 2 ? 'selected' : ''}>GPU</option>
-	        <option value="3" ${shousaiShohin.part == 3 ? 'selected' : ''}>RAM</option>
-	        <option value="4" ${shousaiShohin.part == 4 ? 'selected' : ''}>パワー</option>
-	        <option value="5" ${shousaiShohin.part == 5 ? 'selected' : ''}>ケース</option>
-	    </select>
+    <div>
+        <label for="part">パーツ</label>
+        <select id="numberSelect" onchange="displayValue()">
+            <option value="1" ${shousaiShohin.part == 1 ? 'selected' : ''}>CPU</option>
+            <option value="2" ${shousaiShohin.part == 2 ? 'selected' : ''}>GPU</option>
+            <option value="3" ${shousaiShohin.part == 3 ? 'selected' : ''}>RAM</option>
+            <option value="4" ${shousaiShohin.part == 4 ? 'selected' : ''}>パワー</option>
+            <option value="5" ${shousaiShohin.part == 5 ? 'selected' : ''}>ケース</option>
+        </select>
     </div>
-    <input type="text" id="part" name="part" hidden value="${shousaiShohin.part}">
-	
+    <input type="hidden" id="part" name="part" value="${shousaiShohin.part}">
     <div>
         <label for="img">イメージ</label>
         <input type="text" id="img" name="img" value="${shousaiShohin.img}" required>
     </div>
+	<input type="hidden" id = 'delete_flg' value = "${shousaiShohin.delete_flg}">
+	<input type="hidden" id = 'createdate' value="${shousaiShohin.createdate}">
+	<input type="hidden" id ='updatedate' value ="${shousaiShohin.updatedate}">
     <div>
         <button type="submit">修正</button>
     </div>
-	<c:choose>
-		
-		<c:when test="${shousaiShohin.delete_flg == false }">
-			<div>
-			<button type="button" class="btn"
-			onclick="location.href='DeleteShohin?Shohin_ID=${shousaiShohin.shohin_id }'">削除</button>
-			</div>
-		</c:when>
-		<c:when test="${shousaiShohin.delete_flg == true }">
-			<div>
-			<button type="button" class="btn"
-			onclick="location.href='DeleteShohin?Shohin_ID=${shousaiShohin.shohin_id }'">削除取り消し</button>
-			</div>
-		</c:when>
-	</c:choose>
+    <c:choose>
+        <c:when test="${shousaiShohin.delete_flg == false }">
+            <div>
+                <button type="button" class="btn" onclick="location.href='DeleteShohin?Shohin_ID=${shousaiShohin.shohin_id}'">削除</button>
+            </div>
+        </c:when>
+        <c:when test="${shousaiShohin.delete_flg == true }">
+            <div>
+                <button type="button" class="btn" onclick="location.href='DeleteShohin?Shohin_ID=${shousaiShohin.shohin_id}'">削除取り消し</button>
+            </div>
+        </c:when>
+    </c:choose>
     <div>
-        <button type="button" onclick="location.href='/Master'">Cancel</button>
+        <button type="button" onclick="location.href='/Master'">キャンセル</button>
     </div>
 </form>
+<script src="<c:url value='/js/SelectShohinPage.js' />"  />
 </body>
 </html>

@@ -6,12 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
 <link rel="stylesheet" href="<c:url value='/css/SignUp.css' />">
 
 </head>
 <body>
-	<%@include file="header.jsp"%>
-	<form action="/KaiinToroku" method="post">
+	<form action="/KaiinToroku" id= "KaiinToroku" method="post">
 	    <div>
 	        <label for="userID">ID:</label>
 	        <input type="text" id="userID" name="userID" required>
@@ -35,6 +35,6 @@
 			<button  onClick ="location.href='/'">Cancel</button>
 		</div>
 	</form>
-<script src="<c:url value='/js/SignUp.js' />" />
 </body>
+<script src="<c:url value='/js/SignUp.js' />"></script>
 </html>
